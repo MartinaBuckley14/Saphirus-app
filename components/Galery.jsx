@@ -15,6 +15,12 @@ const Galery = () => {
                 <View>
                     <Image style={styles.galerypics} source={require("../assets/Autoaromas.jpeg")}/>
                 </View>
+                <View>
+                    <Image style={styles.galerypics} source={require("../assets/colorAero.jpeg")}/>
+                </View>
+                <View>
+                    <Image style={styles.galerypics} source={require("../assets/route66.jpeg")}/>
+                </View>
             </ScrollView>
         </>
             
@@ -29,8 +35,8 @@ export default Galery
 const styles = StyleSheet.create({
     galerypics: {
         objectFit: "cover",
-        height: 200,
-        width: 190,
+        height: 300,
+        width: 250,
         borderRadius: 3,
         
     },
