@@ -5,29 +5,22 @@ import { StyleSheet, View, Image, Text, ScrollView} from "react-native"
 const Galery = () => {
     return (
         <>
-            <ScrollView horizontal>
+            <ScrollView horizontal contentContainerStyle={{padding: 10}}>
                 <View style={styles.conteinerpics}>
                     <Image style={styles.galerypics} source={require("../assets/prodShiny.jpeg")}/>
-                </View>
-                <View>
                     <Image style={styles.galerypics} source={require("../assets/difuColor.jpeg")}/>
-                </View>
-                <View>
                     <Image style={styles.galerypics} source={require("../assets/Autoaromas.jpeg")}/>
-                </View>
-                <View>
                     <Image style={styles.galerypics} source={require("../assets/colorAero.jpeg")}/>
-                </View>
-                <View>
                     <Image style={styles.galerypics} source={require("../assets/route66.jpeg")}/>
                 </View>
+                
             </ScrollView>
         </>
             
             
        
        
-    )
+    );
 }
 
 export default Galery
@@ -35,7 +28,7 @@ export default Galery
 const styles = StyleSheet.create({
     galerypics: {
         objectFit: "cover",
-        height: 300,
+        height: 250,
         width: 250,
         borderRadius: 3,
         
@@ -43,5 +36,6 @@ const styles = StyleSheet.create({
     conteinerpics: {
         flex: 1, 
         gap: 20,
+        flexDirection: "row"
     }
 })

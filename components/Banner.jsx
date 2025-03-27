@@ -11,7 +11,7 @@ const Banner = () => {
         </View>
         
        
-    )
+    );
 }
 
 export default Banner

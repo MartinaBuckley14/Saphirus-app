@@ -1,21 +1,37 @@
 
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { StyleSheet, Text, View, Image,ScrollView } from 'react-native';
 import Banner from './components/Banner.jsx';
 import Galery from './components/Galery.jsx';
+import Menu from './components/Menu.jsx';
 
 
 export default function App() {
   return (
     <View style={styles.container}>
       <Banner/>
+      <Menu/>
+      <ScrollView>
+        
       
-      <Text style={styles.bienvenidaText}>Sumate a la comunidad Saphirus y revende con nosotros!</Text>
-      <View style={{flexDirection: "row", gap: 20, width: "100%", }}>
-        <Image style={styles.fotos} source={require("./assets/localView.jpeg")}/>
-        <Text style={styles.infotext}>Podes encontrarnos en: "Direccion del local" <br/> Horarios de atencion: de 10 a 18hs</Text>
-      </View>
+        <Text style={styles.bienvenidaText}>Sumate a la comunidad Saphirus y revende con nosotros!</Text>
+
+        
+
+        <View style={{gap: 20, width: "100%", }}>
+          <Image style={styles.fotos} source={require("./assets/localView.jpeg")}/>
+          <View>
+            <Text style={styles.infotext}>Podes encontrarnos en: "Direccion del local".</Text>
+            <Text style={styles.infotext}>Horarios de atencion: de 10 a 18hs</Text>
+          </View>
+          
+        </View>
       
-      <Galery/>
+        <Galery/>
+        
+
+
+      </ScrollView>
+      
       
     </View> 
     
@@ -28,7 +44,8 @@ const styles = StyleSheet.create({
     height: "100%",
     backgroundColor: 'white',
     alignItems: 'center',
-    gap: 30
+    
+    paddingBottom: 30
   },
   bienvenidaText: {
     fontSize: 25,
@@ -38,18 +55,20 @@ const styles = StyleSheet.create({
     color: 'black',
   },
   fotos: {
-    objectFit: "cover",
-    height:380,
-    width: "50%",
-    borderRadius: 3,
-    alignSelf: "flex-start",
-    marginLeft: 20,
+    resizeMode: "contain",
+    height: 400,
+    width: "100%",
+    borderRadius: 20,
+    
+    
   },
   infotext: {
+    display: "flex",
     fontSize: 20,
     padding: 10,
     
     textAlign: 'center',
+    flexWrap: "wrap",
     color: 'black',
   }
   
