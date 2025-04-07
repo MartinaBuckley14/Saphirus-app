@@ -1,8 +1,9 @@
 
 import { StyleSheet, Text, View, Image,ScrollView } from 'react-native';
-import Banner from './components/Banner.jsx';
-import Galery from './components/Galery.jsx';
-import Menu from './components/Menu.jsx';
+import Banner from './src/components/Banner.jsx';
+import Galery from './src/components/Galery.jsx';
+import Menu from './src/components/Menu.jsx';
+
 
 
 export default function App() {
@@ -10,6 +11,7 @@ export default function App() {
     <View style={styles.container}>
       <Banner/>
       <Menu/>
+      
       <ScrollView>
         
       

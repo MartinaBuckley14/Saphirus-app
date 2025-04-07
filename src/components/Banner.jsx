@@ -5,7 +5,7 @@ const Banner = () => {
     return (
         <View style={styles.banner}>
             <View >
-                <Image style={styles.fotobanner} source={require("../assets/saphirus banner.jpg")} />
+                <Image style={styles.fotobanner} source={require("../../assets/saphirus banner.jpg")} />
                 <Text style={styles.title} >Mercedes City</Text>
             </View>
         </View>
