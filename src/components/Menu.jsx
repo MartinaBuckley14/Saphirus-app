@@ -24,6 +24,11 @@ const Menu = () => {
     
         setDrop(!drop);
     }
+    //Valores de la altura del subMenu
+    const animatedHeight = dropDownAnim.interpolate({
+        inputRange: [0, 1],
+        outputRange: [0, 150], // Tamaño del submenú (se expande de 0 a 150)
+    })
         
     return (
         <View style={styles.navbar} >
@@ -33,35 +38,40 @@ const Menu = () => {
 
 
             <Animated.View 
-                style={[
-                    styles.dropdown,
-                    {
-                        height: dropDownAnim.interpolate({
-                            inputRange: [0, 1],
-                            outputRange: [0, 150], // Tamaño del submenú (se expande de 0 a 150)
-                        }),
-                    },
-                ]}
+                style={[styles.dropdown, {height: animatedHeight}]}
             >
-                <TouchableOpacity style={styles.containernavbar}>
-                    <View style={styles.conteinerLineas}>
-                        <Image style={styles.button} source={require("../../assets/logoSaphirus.jpeg")}/>
-                        <Text>Línea Saphisrus</Text>
-                    </View>
-                    <View>
-                        <Image style={styles.button} source={require("../../assets/logoAmbar.jpeg")}/>
-                        <Text>Línea Ambar</Text>
-                    </View>
-                    <View>
-                        <Image style={styles.button} source={require("../../assets/logoMilano.jpeg")}/>
-                        <Text>Línea Milano</Text>
-                    </View>
-                    
-                    
-                    <Image style={styles.button} source={require("../../assets/logoShiny.jpeg")}/>
-                    <Image style={styles.button} source={require("../../assets/logoRedOn.png")}/>
-                </TouchableOpacity>
-                
+                <View>
+                    <TouchableOpacity style={styles.containernavbar}>
+                        <View style={styles.conteinerLineas}>
+                            <Image style={styles.button} source={require("../../assets/logoSaphirus.jpeg")}/>
+                            <Text style={styles.textMenu}>Línea Saphisrus</Text>
+                        </View>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.containernavbar}>
+                        <View style={styles.conteinerLineas}>
+                            <Image style={styles.button} source={require("../../assets/logoAmbar.jpeg")}/>
+                            <Text style={styles.textMenu}>Línea Ambar</Text>
+                        </View>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.containernavbar}>
+                        <View style={styles.conteinerLineas}>
+                            <Image style={styles.button} source={require("../../assets/logoMilano.jpeg")}/>
+                            <Text style={styles.textMenu}>Línea Milano</Text>
+                        </View>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.containernavbar}>
+                        <View style={styles.conteinerLineas}>
+                            <Image style={styles.button} source={require("../../assets/logoShiny.jpeg")}/>
+                            <Text style={styles.textMenu}>Línea Shiny</Text>
+                        </View>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.containernavbar}>
+                        <View style={styles.conteinerLineas}>
+                            <Image style={styles.button} source={require("../../assets/logoRedOn.png")}/>
+                            <Text style={styles.textMenu}>Línea Red On</Text>
+                        </View>    
+                    </TouchableOpacity>
+                </View>
                 
             </Animated.View>
             
@@ -78,7 +88,7 @@ const styles = StyleSheet.create({
         backgroundColor: "black",
         width: "100%",
         flexDirection: "row",
-        justifyContent: "space-between",
+        justifyContent: "space-around",
         padding: 6,
     },
     containernavbar: {
@@ -100,12 +110,18 @@ const styles = StyleSheet.create({
         borderRadius: 10,
     },
     dropdown: {
-        overflow: 'hidden', // Importante para evitar que los elementos se desborden cuando el menú se cierra
+        overflow: 'hidden', // Evita que los elementos se desborden el menú cerrado
         width: '100%',
+        flexDirection: "row"
     },
     conteinerLineas: {
         flexDirection: "column",
-        color: "white"
+        color: "white",
+        width: '100%',
+    },
+    textMenu: {
+        color: "white",
+        
     }
 
 })
