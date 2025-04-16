@@ -27,20 +27,20 @@ const Menu = () => {
     //Valores de la altura del subMenu
     const animatedHeight = dropDownAnim.interpolate({
         inputRange: [0, 1],
-        outputRange: [0, 150], // Tamaño del submenú (se expande de 0 a 150)
+        outputRange: [0, 250], // Tamaño del submenú (se expande de 0 a 150)
     })
         
     return (
         <View style={styles.navbar} >
             <TouchableOpacity onPress={foldingMenu}>
-                <Text style={styles.button}>Menu</Text>
+                <Text style={styles.buttonMenu}>Menu</Text>
             </TouchableOpacity>
 
 
             <Animated.View 
                 style={[styles.dropdown, {height: animatedHeight}]}
             >
-                <View>
+                <View style={{flexDirection: "column"}}>
                     <TouchableOpacity style={styles.containernavbar}>
                         <View style={styles.conteinerLineas}>
                             <Image style={styles.button} source={require("../../assets/logoSaphirus.jpeg")}/>
@@ -87,18 +87,27 @@ const styles = StyleSheet.create({
     navbar: {
         backgroundColor: "black",
         width: "100%",
-        flexDirection: "row",
-        justifyContent: "space-around",
+        flexDirection: "column",
+        
         padding: 6,
     },
     containernavbar: {
-        flexDirection: "row",
-        justifyContent: "space-around",
-        width: "100%",
+        alignContent: "center",
         marginRight: 20,
         
     },
     button: {
+        color: "white",
+        height: 30,
+        width: 40,
+        marginLeft: 8,
+
+        textAlign: "center",
+        fontWeight: "bold",
+        fontStyle: "italic",
+        borderRadius: 10,
+    },
+    buttonMenu: {
         color: "white",
         height: 40,
         width: 50,
@@ -117,10 +126,11 @@ const styles = StyleSheet.create({
     conteinerLineas: {
         flexDirection: "column",
         color: "white",
-        width: '100%',
+        
     },
     textMenu: {
         color: "white",
+        fontSize: 10
         
     }
 
