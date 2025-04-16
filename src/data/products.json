@@ -1,0 +1,42 @@
+[
+    {
+        "id": "AE-1",
+        "title": "Aerosol Sandia Pepino",
+        "description": "Es una fragancia que combina dos frescuras, haciendola ideal para aromatizar tu ambiente durante el verano y sentirte tan fresco como quieras.",
+        "category": "Aerosol",
+        "price": 4640,
+        "tags": ["aerosol", "sandia"],
+        "brand": "Saphirus",
+        "photo": {}
+    },
+    {
+        "id": "TX-1",
+        "title": "Textil Good woman",
+        "description": "Fragancia simil del perfume de Carolina Herrera -Good Girl- o también conocido como -El zapatito-",
+        "category": "Textil",
+        "price": 3210,
+        "tags": ["textil", "carolina", "good", "perfume"],
+        "brand": "Saphirus",
+        "photo": {}
+    },
+    {
+        "id": "AA-1",
+        "title": "Aerosol Ambar Rocio",
+        "description": "Con notas inspiradas en los más ricos suavizantes para ropa, es la fragancia que a lo largo de los años se gano el corazón de los argentinos y hoy en día se encuantra entre las tres más elegidas a la hora de aromatizar la casa.",
+        "category": "Aerosol ambar",
+        "price": 3640,
+        "tags": ["aerosol", "rocio", "suavizante", "ropa"],
+        "brand": "Ambar",
+        "images": {}
+    },
+    {
+        "id": "AA-1",
+        "title": "Aerosol Ambar Rocio",
+        "description": "Con notas inspiradas en los más ricos suavizantes para ropa, es la fragancia que a lo largo de los años se gano el corazón de los argentinos y hoy en día se encuantra entre las tres más elegidas a la hora de aromatizar la casa.",
+        "category": "Aerosol ambar",
+        "price": 3640,
+        "tags": ["aerosol", "rocio", "suavizante", "ropa"],
+        "brand": "Ambar",
+        "images": {}
+    }
+]
