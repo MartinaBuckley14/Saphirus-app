@@ -1,7 +1,28 @@
 [
-    "Saphirus",
-    "Ambar",
-    "Milano",
-    "Shiny",
-    "Red On"
+    {
+        "id": "sph",
+        "name": "Saphirus",
+        "image": "../../assets/logoSaphirus.jpeg"
+    },
+    {
+        "id": "amb",
+        "name": "Ambar",
+        "image": "../../assets/logoAmbar.jpeg"
+    },
+    {
+        "id": "mln",
+        "name": "Milano",
+        "image": "../../assets/logoMilano.jpeg"
+    },
+    {
+        "id": "shy",
+        "name": "Shiny",
+        "image": "../../assets/logoShiny.jpeg"
+    },
+    {
+        "id": "rdo",
+        "name": "Red On",
+        "image": "../../assets/logoRedOn.png"
+    }
+    
 ]

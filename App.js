@@ -1,8 +1,9 @@
-
 import { StyleSheet, Text, View, Image,ScrollView } from 'react-native';
-import Banner from './src/components/Banner.jsx';
-import Galery from './src/components/Galery.jsx';
-import Menu from './src/components/Menu.jsx';
+import Banner from './src/components/Banner';
+import Galery from './src/components/Galery';
+import Menu from './src/components/Menu';
+import { colors } from './src/global/colors';
+import Home from './src/screens/Home';
 
 
 
@@ -11,28 +12,7 @@ export default function App() {
     <View style={styles.container}>
       <Banner/>
       <Menu/>
-      
-      <ScrollView>
-        
-      
-        <Text style={styles.bienvenidaText}>Sumate a la comunidad Saphirus y revende con nosotros!</Text>
-
-        
-
-        <View style={{gap: 20, width: "100%", }}>
-          <Image style={styles.fotos} source={require("./assets/localView.jpeg")}/>
-          <View>
-            <Text style={styles.infotext}>Podes encontrarnos en: "Direccion del local".</Text>
-            <Text style={styles.infotext}>Horarios de atencion: de 10 a 18hs</Text>
-          </View>
-          
-        </View>
-      
-        <Galery/>
-        
-
-
-      </ScrollView>
+      <Home/>
       
       
     </View> 
@@ -44,7 +24,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     height: "100%",
-    backgroundColor: 'white',
+    backgroundColor: colors.cream,
     alignItems: 'center',
     
     paddingBottom: 30
