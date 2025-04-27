@@ -4,15 +4,20 @@ import Galery from './src/components/Galery';
 import Menu from './src/components/Menu';
 import { colors } from './src/global/colors';
 import Home from './src/screens/Home';
+import { useState } from 'react';
+import ItemListCategory from './src/screens/ItemListCategory';
 
 
 
 export default function App() {
+  const [categorySelected, setCategorySelected]= useState("")
+
   return (
     <View style={styles.container}>
       <Banner/>
-      <Menu/>
-      <Home/>
+      <Menu pickedCategory={setCategorySelected}/>
+      {!categorySelected ? <Home/> : <ItemListCategory category={categorySelected}/> }
+      
       
       
     </View> 

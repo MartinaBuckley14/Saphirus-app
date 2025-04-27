@@ -1,30 +1,23 @@
-import { StyleSheet, TouchableOpacity, View, Text, Image, Button } from 'react-native'
+import { StyleSheet, TouchableOpacity, Text } from 'react-native'
 import React from 'react'
 
-const CategoryButton = ({category}) => {
-  return (
-    <View style={styles.conteinerLineas}>
-      <Button style= {{color:"black"}} title={category}/> 
-    </View>
-  )
-}
+const CategoryButton = ({category="", chosenCategory = ()=>{}}) => (
+  <TouchableOpacity onPress={()=> chosenCategory(category)} style={styles.button}>
+    <Text>{category}</Text>
+  </TouchableOpacity>
+)
 
 export default CategoryButton
 
 const styles = StyleSheet.create({
-  conteinerLineas: {
-    flexDirection: "column",
-    color: "black",
-  },
   button: {
-    color: "white",
-    height: 40,
-    width: 50,
-    marginLeft: 8,
-
-    textAlign: "center",
-    fontWeight: "bold",
-    fontStyle: "italic",
-    borderRadius: 10,
+    marginHorizontal: 10,
+    alignItems: 'center',
   },
+  /*image: {
+    width: 50,
+    height: 50,
+    borderRadius: 25,
+    marginBottom: 5,
+  },*/
 })

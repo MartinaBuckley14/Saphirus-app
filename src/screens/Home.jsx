@@ -1,7 +1,6 @@
 import { StyleSheet, Text, View,ScrollView, Image } from 'react-native'
 import React from 'react'
-import categories from '../data/categories.json'
-import Menu from '../components/Menu'
+
 import Galery from '../components/Galery'
 import { colors } from '../global/colors'
 
@@ -9,24 +8,24 @@ const Home = () => {
   return (
     <View style={styles.container}>
             
-        <ScrollView>                    
-            <Text style={styles.bienvenidaText}>Sumate a la comunidad Saphirus y revende con nosotros!</Text>
+      <ScrollView>                    
+        <Text style={styles.bienvenidaText}>Sumate a la comunidad Saphirus y revende con nosotros!</Text>
     
               
-            <View style={{gap: 20, width: "100%", }}>
-              <Image style={styles.fotos} source={require("../../assets/localView.jpeg")}/>
-              <View>
-                <Text style={styles.infotext}>Podes encontrarnos en: "Direccion del local".</Text>
-                <Text style={styles.infotext}>Horarios de atencion: de 10 a 18hs</Text>
-              </View>
+        <View style={{gap: 20, width: "100%", }}>
+          <Image style={styles.fotos} source={require("../../assets/localView.jpeg")}/>
+          <View>
+            <Text style={styles.infotext}>Podes encontrarnos en: "Direccion del local".</Text>
+            <Text style={styles.infotext}>Horarios de atencion: de 10 a 18hs</Text>
+          </View>
               
-            </View>
+        </View>
           
-            <Galery/>
+        <Galery/>
             
     
     
-        </ScrollView>
+      </ScrollView>
           
           
     </View> 
