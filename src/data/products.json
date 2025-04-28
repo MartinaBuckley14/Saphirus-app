@@ -10,6 +10,16 @@
         "photo": {}
     },
     {
+        "id": "AE-2",
+        "title": "Aerosol Coco Maracuya",
+        "description": "Fragancia de notas dulces y citricas. Con fuerte predoiminancia del maracuya.",
+        "category": "Aerosol",
+        "price": 4640,
+        "tags": ["aerosol", "maracuya", "coco", "citrico", "dulce"],
+        "brand": "Saphirus",
+        "photo": {}
+    },
+    {
         "id": "TX-1",
         "title": "Textil Good woman",
         "description": "Fragancia simil del perfume de Carolina Herrera -Good Girl- o también conocido como -El zapatito-",
@@ -20,23 +30,33 @@
         "photo": {}
     },
     {
-        "id": "AA-1",
-        "title": "Aerosol Ambar Rocio",
-        "description": "Con notas inspiradas en los más ricos suavizantes para ropa, es la fragancia que a lo largo de los años se gano el corazón de los argentinos y hoy en día se encuantra entre las tres más elegidas a la hora de aromatizar la casa.",
-        "category": "Aerosol ambar",
-        "price": 3640,
-        "tags": ["aerosol", "rocio", "suavizante", "ropa"],
-        "brand": "Ambar",
-        "images": {}
+        "id": "TX-2",
+        "title": "Textil Petalos de Orquideas",
+        "description": "Fragancia floral, inspirada en los jardines de mi abuelita",
+        "category": "Textil",
+        "price": 3210,
+        "tags": ["textil", "petalos", "floral"],
+        "brand": "Saphirus",
+        "photo": {}
+    },
+    {
+        "id": "TX-3",
+        "title": "Textil Rocio",
+        "description": "Con notas inspiradas en los más ricos suavizantes para ropa, es la fragancia que a lo largo de los años se gano el corazón de los argentinos y hoy en día se encuantra entre las tres más elegidas a la hora de aromatizar la ropa.",
+        "category": "Textil",
+        "price": 3210,
+        "tags": ["textil", "rocio", "suvisante", "vivere"],
+        "brand": "Saphirus",
+        "photo": {}
     },
     {
         "id": "AA-1",
         "title": "Aerosol Ambar Rocio",
         "description": "Con notas inspiradas en los más ricos suavizantes para ropa, es la fragancia que a lo largo de los años se gano el corazón de los argentinos y hoy en día se encuantra entre las tres más elegidas a la hora de aromatizar la casa.",
         "category": "Aerosol ambar",
-        "price": 3640,
+        "price": 3520,
         "tags": ["aerosol", "rocio", "suavizante", "ropa"],
         "brand": "Ambar",
-        "images": {}
+        "photo": {}
     }
 ]

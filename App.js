@@ -16,10 +16,7 @@ export default function App() {
     <View style={styles.container}>
       <Banner/>
       <Menu pickedCategory={setCategorySelected}/>
-      {!categorySelected ? <Home/> : <ItemListCategory category={categorySelected}/> }
-      
-      
-      
+      {!categorySelected ? <Home/> : <ItemListCategory category={categorySelected} setCategorySelected={setCategorySelected}/> }
     </View> 
     
   );
