@@ -2,18 +2,18 @@ import { Button, Pressable, StyleSheet, Text, TextInput, View } from 'react-nati
 import React, { useState } from 'react'
 import { colors } from '../global/colors';
 
-const Search = ({error, onSearch, goBack}) => {
+const Search = ({error="", onSearch = ()=>{}, goBack =()=>{}}) => {
     const [keyWord, setKeyword]= useState("");
 
   return (
     <View>
-        <Pressable onPress={goBack} style={styles.goBack}><Text>Inicio</Text></Pressable>
-
-        <TextInput
+       <TextInput
             placeholder='Buscar...'
             value={keyWord}
-            onChangeText={(text)=> onSearch(text)}
+            onChangeText={setKeyword}
         />
+        <Pressable onPress={()=> onSearch(keyWord)} style={styles.goBack}><Text>Buscar</Text></Pressable>
+        <Pressable onPress={goBack} style={styles.goBack}><Text>Inicio</Text></Pressable>
         
     </View>
   )
