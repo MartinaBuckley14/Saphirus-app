@@ -1,5 +1,5 @@
 import { StyleSheet, Text, View,ScrollView, Image } from 'react-native'
-import React from 'react'
+
 
 import Galery from '../components/Galery'
 import { colors } from '../global/colors'

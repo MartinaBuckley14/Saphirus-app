@@ -2,13 +2,11 @@ import { ScrollView, StyleSheet, Text, View,Image } from 'react-native'
 import React from 'react'
 
 const ProductItem = ({product}) => {
-  // Validamos si el producto tiene una foto para evitar errores
-  const imageUrl = product?.photo?.url || 'https://via.placeholder.com/200';
+  
 
   return (
-
     <View style={styles.productContainer}>
-      <Image source={{ uri: imageUrl }} style={styles.productImage} />
+      
       <Text style={styles.productTitle}>{product.title}</Text>
       <Text style={styles.productDescription}>{product.description}</Text>
       <Text style={styles.productPrice}>${product.price}</Text>

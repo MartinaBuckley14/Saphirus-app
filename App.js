@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View, Image,ScrollView } from 'react-native';
 import Banner from './src/components/Banner';
-import Galery from './src/components/Galery';
+
 import Menu from './src/components/Menu';
 import { colors } from './src/global/colors';
 import Home from './src/screens/Home';
