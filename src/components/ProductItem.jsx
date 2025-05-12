@@ -1,16 +1,13 @@
-import { ScrollView, StyleSheet, Text, View,Image } from 'react-native'
-import React from 'react'
+import {StyleSheet, Text, View,Image, Pressable } from 'react-native'
 
-const ProductItem = ({product}) => {
+
+const ProductItem = ({product,detail}) => {
   
-
   return (
-    <View style={styles.productContainer}>
-      
+    <Pressable style={styles.productContainer} onPress={()=> detail.navigate('ItemDetail', {productId: product.id})}>      
       <Text style={styles.productTitle}>{product.title}</Text>
       <Text style={styles.productDescription}>{product.description}</Text>
-      <Text style={styles.productPrice}>${product.price}</Text>
-    </View>
+    </Pressable>
   )
 }
 

@@ -6,14 +6,17 @@ const Search = ({error="", onSearch = ()=>{}, goBack =()=>{}}) => {
     const [keyWord, setKeyword]= useState("");
 
   return (
-    <View>
+    <View style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-around'}}>
        <TextInput
             placeholder='Buscar...'
             value={keyWord}
             onChangeText={setKeyword}
         />
-        <Pressable onPress={()=> onSearch(keyWord)} style={styles.goBack}><Text>Buscar</Text></Pressable>
-        <Pressable onPress={goBack} style={styles.goBack}><Text>Inicio</Text></Pressable>
+        <View style={styles.ConteinerButtons}>
+          <Pressable onPress={()=> onSearch(keyWord)} style={styles.goBack}><Text>Buscar</Text></Pressable>
+          <Pressable onPress={goBack} style={styles.goBack}><Text>Volver a Inicio</Text></Pressable>
+        </View>
+        
         
     </View>
   )
@@ -22,13 +25,19 @@ const Search = ({error="", onSearch = ()=>{}, goBack =()=>{}}) => {
 export default Search
 
 const styles = StyleSheet.create({
-    goBack: {
-        borderWidth: 2,
-        borderRadius: 4,
-        borderColor: colors.oceanBlue,
+  goBack: {
+    borderWidth: 2,
+    borderRadius: 4,
+    borderColor: colors.cream,
 
-        width: 50,
-        padding: 3,
-        
-    }
+    
+    padding: 3,
+    textAlign: 'center'
+  },
+  ConteinerButtons: {
+    width: '50%',
+
+    flexDirection: 'row',
+    justifyContent: 'flex-end'
+  }
 })

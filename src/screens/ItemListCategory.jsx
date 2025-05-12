@@ -3,11 +3,20 @@ import { useEffect, useState } from 'react'
 import products from "../data/products.json"
 import Search from '../components/Search'
 import ProductItem from '../components/ProductItem'
+import Banner from '../components/Banner'
+import Menu from '../components/Menu'
 
-const ItemListCategory = ({category="", setCategorySelected=()=>{}}) => {
+const ItemListCategory = ({
+  //category="", 
+  //setCategorySelected=()=>{},
+    route, 
+    navigation,
+  }) => {
   const [keyWord, setKeyword] = useState("")
   const [productsFiltered, setProductsFiltered] = useState([]);
   const [error, setError] = useState("")
+
+  const{category: category } = route.params
 
   useEffect(()=>{
     const regex = /\d/;
@@ -36,11 +45,13 @@ const ItemListCategory = ({category="", setCategorySelected=()=>{}}) => {
   },[keyWord, category])
   return (
     <View style={{flex: 1}}>
+      <Banner/>
+
       <Text>Línea {category}</Text>
-      <Search error={error} onSearch={setKeyword} goBack={()=>setCategorySelected("")} style={styles.buscador}/>
+      <Search error={error} onSearch={setKeyword} goBack={()=>navigation.goBack()} style={styles.buscador}/>
       <FlatList 
         data={productsFiltered}
-        renderItem={({item})=> <ProductItem product={item}/>}
+        renderItem={({item})=>(<ProductItem product={item} detail={navigation}/>)}
         keyExtractor={(product)=> product.id}
       />
       

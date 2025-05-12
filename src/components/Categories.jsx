@@ -3,6 +3,8 @@ import React from 'react'
 import categories from '../data/categories.json'
 import CategoryButton from './CategoryButton'
 
+
+
 const Categories = ({selectCategory}) => {
     
   return (

@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
         backgroundColor: "#0D7FBD"
     },
     fotobanner: {
-        height:250, 
+        height:200, 
         width: "100%"
     },
     title: {

@@ -1,11 +1,9 @@
 import { StyleSheet, Text, View, Image,ScrollView } from 'react-native';
-import Banner from './src/components/Banner';
 
-import Menu from './src/components/Menu';
 import { colors } from './src/global/colors';
-import Home from './src/screens/Home';
 import { useState } from 'react';
-import ItemListCategory from './src/screens/ItemListCategory';
+import { NavigationContainer } from '@react-navigation/native';
+import Navigator from './src/navigation/Navigator';
 
 
 
@@ -13,12 +11,9 @@ export default function App() {
   const [categorySelected, setCategorySelected]= useState("")
 
   return (
-    <View style={styles.container}>
-      <Banner/>
-      <Menu pickedCategory={setCategorySelected}/>
-      {!categorySelected ? <Home/> : <ItemListCategory category={categorySelected} setCategorySelected={setCategorySelected}/> }
-    </View> 
-    
+    <Navigator>
+      
+    </Navigator>
   );
 }
 

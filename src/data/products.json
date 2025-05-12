@@ -27,7 +27,7 @@
         "price": 3210,
         "tags": ["textil", "carolina", "good", "perfume"],
         "brand": "Saphirus",
-        "photo": {}
+        "photo": ["../../assets/aceiteView.jpeg"]
     },
     {
         "id": "TX-2",

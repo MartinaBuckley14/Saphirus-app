@@ -2,7 +2,7 @@ import { StyleSheet, TouchableOpacity, Text } from 'react-native'
 import React from 'react'
 
 const CategoryButton = ({category="", chosenCategory = ()=>{}}) => (
-  <TouchableOpacity onPress={()=> chosenCategory(category)} style={styles.button}>
+  <TouchableOpacity onPress={()=> chosenCategory.navigate('ListCategories', {category})} style={styles.button}>
     <Text>{category}</Text>
   </TouchableOpacity>
 )
