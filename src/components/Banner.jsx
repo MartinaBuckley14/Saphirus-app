@@ -1,4 +1,3 @@
-import React from "react"
 import { StyleSheet, View, Image, Text} from "react-native"
 
 const Banner = () => {
@@ -19,7 +18,7 @@ export default Banner
 const styles = StyleSheet.create({
     banner: {
         width: "100%",
-        backgroundColor: "#0D7FBD"
+        backgroundColor: 'transparent',
     },
     fotobanner: {
         height:200, 

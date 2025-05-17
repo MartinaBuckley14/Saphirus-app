@@ -64,11 +64,7 @@ const styles = StyleSheet.create({
         alignSelf: 'flex-start',
         
         
-        padding: 6,
-    },
-    containernavbar: {
-        alignContent: "center",
-        marginRight: 20,
+        padding: 4,
     },
     button: {
         height: 40,
@@ -84,6 +80,7 @@ const styles = StyleSheet.create({
         
     },
     buttonMenu: {
+        backgroundColor: 'transparent',
         color: colors.darkerBlue,
         height: 40,
         width:"20%",
@@ -101,6 +98,7 @@ const styles = StyleSheet.create({
         
     },
     dropdown: {
+        backgroundColor: 'transparent',
         overflow: 'hidden', // Evita que los elementos se desborden el menú cerrado
         width: '100%',
         

@@ -32,34 +32,31 @@ export default Inicio
 
 const styles = StyleSheet.create({
     container: {
-        
-        backgroundColor: colors.cream,
-        alignItems: 'center',
-        
-        paddingBottom: '50%'
+      backgroundColor: colors.cream,
+      alignItems: 'center',
     },
     bienvenidaText: {
-        fontSize: 25,
-        padding: 20,
+      fontSize: 25,
+      padding: 20,
       
-        textAlign: 'center',
-        color: 'black',
+      textAlign: 'center',
+      color: 'black',
     },
     fotos: {
-        resizeMode: "contain",
-        height: 400,
-        width: "100%",
-        borderRadius: 20,
+      resizeMode: "contain",
+      height: 400,
+      width: "100%",
+      borderRadius: 20,
         
         
     },
     infotext: {
-        display: "flex",
-        fontSize: 20,
-        padding: 10,
+      display: "flex",
+      fontSize: 20,
+      padding: 10,
         
-        textAlign: 'center',
-        flexWrap: "wrap",
-        color: 'black',
+      textAlign: 'center',
+      flexWrap: "wrap",
+      color: 'black',
     }
 })

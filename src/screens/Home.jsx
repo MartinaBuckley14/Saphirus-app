@@ -7,7 +7,7 @@ import Menu from '../components/Menu';
 const Home = ({route, navigation}) => {
   return (
     <View style={styles.container}>
-      <Banner/>
+      
       <Menu pickedCategory={navigation}/>     
       <Inicio/>
     </View> 
@@ -22,8 +22,6 @@ const styles = StyleSheet.create({
     height: "100%",
     backgroundColor: colors.cream,
     alignItems: 'center',
-    
-    paddingBottom: 50
   },
   bienvenidaText: {
     fontSize: 25,

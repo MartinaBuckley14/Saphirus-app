@@ -5,6 +5,7 @@ import Search from '../components/Search'
 import ProductItem from '../components/ProductItem'
 import Banner from '../components/Banner'
 import Menu from '../components/Menu'
+import { colors } from '../global/colors'
 
 const ItemListCategory = ({
   //category="", 
@@ -44,8 +45,8 @@ const ItemListCategory = ({
 
   },[keyWord, category])
   return (
-    <View style={{flex: 1}}>
-      <Banner/>
+    <View style={styles.ListCat}>
+      
 
       <Text>Línea {category}</Text>
       <Search error={error} onSearch={setKeyword} goBack={()=>navigation.goBack()} style={styles.buscador}/>
@@ -64,5 +65,9 @@ export default ItemListCategory
 const styles = StyleSheet.create({
   buscador: {
     alignSelf: "flex-end"
+  },
+  ListCat: {
+    flex: 1,
+    backgroundColor: colors.cream
   }
 })

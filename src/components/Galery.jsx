@@ -32,10 +32,12 @@ const styles = StyleSheet.create({
         width: 250,
         borderRadius: 3,
         
+        
     },
     conteinerpics: {
         flex: 1, 
         gap: 20,
-        flexDirection: "row"
+        flexDirection: "row",
+        paddingBottom: 50
     }
 })

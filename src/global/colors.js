@@ -1,6 +1,7 @@
 export const colors ={
-    cream: 'FBE4D6',
+    cream: 'rgb(249, 243, 239)',
+    creamDark: 'rgb(159, 159, 158)',
     oceanBlue:' rgb(38, 31, 179)',
-    darkBlue: '161179',
-    darkerBlue: '0C0950'
+    darkBlue: 'rgb(13, 9, 101)',
+    darkerBlue: 'rgb(5, 2, 61)'
 }
