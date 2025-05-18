@@ -80,8 +80,8 @@ const styles = StyleSheet.create({
         
     },
     buttonMenu: {
-        backgroundColor: 'transparent',
-        color: colors.darkerBlue,
+        backgroundColor: colors.backgroundMenuButton,
+        color: colors.cream,
         height: 40,
         width:"20%",
         
@@ -94,7 +94,7 @@ const styles = StyleSheet.create({
         borderRadius: 3,
         borderWidth: 2,
         
-        borderColor: colors.oceanBlue
+        borderColor: colors.darkerBlue
         
     },
     dropdown: {

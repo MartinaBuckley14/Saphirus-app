@@ -16,6 +16,7 @@ const ItemDetail = ({route, navigation}) => {
 
     }, [idSelected]);
     
+    
   return (
     <>
       <Pressable style={styles.ItemBack}>
@@ -25,7 +26,7 @@ const ItemDetail = ({route, navigation}) => {
         <Text style={styles.textPrice}>${product.price}</Text>
         <View style={styles.conteinerButton}>
           <Pressable onPress={() => navigation.goBack()} style={styles.button}><Text style={{textAlign: 'center'}}>Back</Text></Pressable>
-          <Pressable style={styles.button}><Text style={{textAlign: 'center'}}>Add to cart</Text></Pressable>
+          <Pressable onPress={() => navigation.addToCart()} style={styles.button}><Text style={{textAlign: 'center'}}>Add to cart</Text></Pressable>
         </View>
         
 

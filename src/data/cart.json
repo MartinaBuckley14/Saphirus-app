@@ -1,1 +1,24 @@
-[]
+[
+    {
+        "id": "DF-1",
+        "title": "Difusor Cony",
+        "description": "Notas suaves y envolventes que refrescan cualquier espacio, aportando calidez y un toque sutil de sofisticación.",
+        "category": "Difusor",
+        "price": 3800,
+        "tags": ["cony", "difusor", "delicado"],
+        "brand": "Saphirus",
+        "photo": "https://academia.saphirus.com.ar/wp-content/uploads/2023/09/saphirus-difusores-cony-1024x1024.jpg",
+        "quantity": []
+    },
+    {
+        "id": "LL-1",
+        "title": "Limpiador Liquido Lavanda",
+        "description": "Fórmula efectiva que limpia profundamente mientras deja un aroma relajante y fresco a lavanda, ideal para el hogar.",
+        "category": "Limpiador Liquido",
+        "price": 2480,
+        "tags": ["lavanda", "pisos", "liquido"],
+        "brand": "Shiny",
+        "photo": "https://academia.saphirus.com.ar/wp-content/uploads/2024/09/20240920-shiny-limpiador-liquido-lavanda-1024x1024.jpg",
+        "quantity": []
+    }
+]
