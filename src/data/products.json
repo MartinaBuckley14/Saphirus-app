@@ -24,7 +24,7 @@
         "title": "Textil Good woman",
         "description": "Fragancia simil del perfume de Carolina Herrera -Good Girl- o también conocido como -El zapatito-",
         "category": "Textil",
-        "price": 3210,
+        "price": 3320,
         "tags": ["textil", "carolina", "good", "perfume"],
         "brand": "Saphirus",
         "photo": "https://academia.saphirus.com.ar/wp-content/uploads/2024/12/20241210-textil-good-woman-saphirus-1024x1024.jpg"
@@ -34,7 +34,7 @@
         "title": "Textil Petalos de Orquideas",
         "description": "Fragancia floral, inspirada en los jardines de mi abuelita",
         "category": "Textil",
-        "price": 3210,
+        "price": 3320,
         "tags": ["textil", "petalos", "floral"],
         "brand": "Saphirus",
         "photo": "https://academia.saphirus.com.ar/wp-content/uploads/2023/09/Petalos-de-Orquideas-ind-1024x1024.jpg"
@@ -44,7 +44,7 @@
         "title": "Textil Rocio",
         "description": "Con notas inspiradas en los más ricos suavizantes para ropa, es la fragancia que a lo largo de los años se gano el corazón de los argentinos y hoy en día se encuantra entre las tres más elegidas a la hora de aromatizar la ropa.",
         "category": "Textil",
-        "price": 3210,
+        "price": 3320,
         "tags": ["textil", "rocio", "suvisante", "vivere"],
         "brand": "Saphirus",
         "photo": "https://academia.saphirus.com.ar/wp-content/uploads/2023/09/saphirus-textil-rocio-1024x1024.jpg"
@@ -58,5 +58,166 @@
         "tags": ["aerosol", "rocio", "suavizante", "ropa"],
         "brand": "Ambar",
         "photo": "https://academia.saphirus.com.ar/wp-content/uploads/2023/09/rocio-latas-ambar-1024x1024.jpg"
+    },
+    {
+        "id": "ASA-1",
+        "title": "Aceite Ambar Coco-vai",
+        "description": "Fragancia dulce y envolvente que combina la suavidad del coco con la calidez de la vainilla. Ideal para crear un ambiente acogedor, relajante y deliciosamente perfumado.",
+        "category": "Aceite Esencial ambar",
+        "price": 2100,
+        "tags": ["aceite", "coco", "vainilla"],
+        "brand": "Ambar",
+        "photo": "https://academia.saphirus.com.ar/wp-content/uploads/2023/09/ambar-aceite-esencial-cocovai-1024x1024.jpg"
+    },
+    {
+        "id": "TA-1",
+        "title": "Textil Ambar Bamboo",
+        "description": "Frescura natural y elegante con notas verdes y suaves del bambú. Ideal para aromatizar telas, dejando una sensación limpia y duradera.",
+        "category": "Textil ambar",
+        "price": 3200,
+        "tags": ["fresco", "textil", "bamboo"],
+        "brand": "Ambar",
+        "photo": "https://academia.saphirus.com.ar/wp-content/uploads/2023/09/ambar-spray-textil-bamboo-1-1024x1024.jpg"
+    },
+    {
+        "id": "SA-1",
+        "title": "Sahumerio Ambar Palo Santo",
+        "description": "Aroma místico y amaderado que purifica y armoniza los espacios. El sahumerio de palo santo eleva la energía y aporta calma espiritual.",
+        "category": "Sahumerios ambar",
+        "price": 900,
+        "tags": ["amaderado", "sahumerio", "energia"],
+        "brand": "Ambar",
+        "photo": "https://academia.saphirus.com.ar/wp-content/uploads/2023/09/ambar-sahumerios-palo-santo-3-1024x1024.jpg"
+    },
+    {
+        "id": "TM-1",
+        "title": "Tarjeta Aromatica Cereza malbec",
+        "description": "Deliciosa combinación frutal y sofisticada. La tarjeta aromática Cereza Malbec perfuma espacios pequeños con notas dulces, intensas y elegantes, inspiradas en el vino y la fruta roja.",
+        "category": "Tarjeta Aromatica",
+        "price": 6800,
+        "tags": ["cereza", "frutal", "vino"],
+        "brand": "Saphirus",
+        "photo": "https://academia.saphirus.com.ar/wp-content/uploads/2023/09/Cereza-Malbec-1024x1024.png"
+    },
+    {
+        "id": "DT-1",
+        "title": "Touch Frutos rojos + Dispositivo",
+        "description": "Aromatiza con la frescura vibrante de frutos rojos, combinada con un dispositivo práctico para una perfumación continua y duradera.",
+        "category": "Touch + Dispositivo",
+        "price": 5500,
+        "tags": ["frutos", "dulce", "baño"],
+        "brand": "Saphirus",
+        "photo": "https://academia.saphirus.com.ar/wp-content/uploads/2024/07/20240719-blister-compuesto-white-y-frutos-rojos-saphirus-1024x1024.jpg"
+    },
+    {
+        "id": "RT-1",
+        "title": "Repuesto Touch Agua Marina",
+        "description": "Refrescante fragancia marina que aporta frescura y limpieza a tus ambientes, ideal para mantener un aroma suave y revitalizante todo el día.",
+        "category": "Repuesto Touch",
+        "price": 2500,
+        "tags": ["frescura", "marino", "baño"],
+        "brand": "Saphirus",
+        "photo": "https://academia.saphirus.com.ar/wp-content/uploads/2024/07/20240719-blister-individual-agua-marina-saphirus-1024x1024.jpg"
+    },
+    {
+        "id": "DF-1",
+        "title": "Difusor Cony",
+        "description": "Notas suaves y envolventes que refrescan cualquier espacio, aportando calidez y un toque sutil de sofisticación.",
+        "category": "Difusor",
+        "price": 3800,
+        "tags": ["cony", "difusor", "delicado"],
+        "brand": "Saphirus",
+        "photo": "https://academia.saphirus.com.ar/wp-content/uploads/2023/09/saphirus-difusores-cony-1024x1024.jpg"
+    },
+    {
+        "id": "LL-1",
+        "title": "Limpiador Liquido Lavanda",
+        "description": "Fórmula efectiva que limpia profundamente mientras deja un aroma relajante y fresco a lavanda, ideal para el hogar.",
+        "category": "Limpiador Liquido",
+        "price": 2480,
+        "tags": ["lavanda", "pisos", "liquido"],
+        "brand": "Shiny",
+        "photo": "https://academia.saphirus.com.ar/wp-content/uploads/2024/09/20240920-shiny-limpiador-liquido-lavanda-1024x1024.jpg"
+    },
+    {
+        "id": "LM-1",
+        "title": "Lustramueble en aerosol",
+        "description": "Fácil aplicación que protege y da brillo natural a tus muebles, dejando un acabado limpio y sin residuos.",
+        "category": "Lustramuebles",
+        "price": 3690,
+        "tags": ["brillo", "muebles", "lustramuebles"],
+        "brand": "Shiny",
+        "photo": "https://academia.saphirus.com.ar/wp-content/uploads/2024/09/20240920-shiny-lustramueble-original-1024x1024.jpg"
+    },
+    {
+        "id": "RA-1",
+        "title": "Repelente en aerosol",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "category": "Repelente aerosol",
+        "price": 3000,
+        "tags": ["mosquitos", "aerosol", "repelente"],
+        "brand": "Red On",
+        "photo": "https://academia.saphirus.com.ar/wp-content/uploads/2024/12/20241210-repelente-Aerosol-131g-deet15-post-saphirus-red-on-1024x1024.jpg"
+    },
+    {
+        "id": "RA-2",
+        "title": "Repelente extra-duracion en aerosol",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "category": "Repelente aerosol",
+        "price": 3200,
+        "tags": ["mosquitos", "aerosol", "repelente"],
+        "brand": "Red On",
+        "photo": "https://academia.saphirus.com.ar/wp-content/uploads/2024/12/20241210-repelente-aerosol-131g-deet25-post-saphirus-red-on-1024x1024.jpg"
+    },
+    {
+        "id": "RS-1",
+        "title": "Repelente extra-duracion en spray x200ml",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "category": "Repelente spray x200ml",
+        "price": 2470,
+        "tags": ["mosquitos", "spray", "repelente"],
+        "brand": "Red On",
+        "photo": "https://academia.saphirus.com.ar/wp-content/uploads/2024/12/20241210-repelente-spray-200ml-deet-25-post-saphirus-red-on-1024x1024.jpg"
+    },
+    {
+        "id": "RS-2",
+        "title": "Repelente en spray x200ml",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "category": "Repelente spray x200ml",
+        "price": 2470,
+        "tags": ["mosquitos", "spray", "repelente"],
+        "brand": "Red On",
+        "photo": "https://academia.saphirus.com.ar/wp-content/uploads/2024/12/20241210-repelente-spray-200ml-deet-15-post-saphirus-red-on-1024x1024.jpg"
+    },
+    {
+        "id": "RS-3",
+        "title": "Repelente en spray x60ml",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "category": "Repelente spray x60ml",
+        "price": 1540,
+        "tags": ["mosquitos", "spray", "repelente"],
+        "brand": "Red On",
+        "photo": "https://academia.saphirus.com.ar/wp-content/uploads/2024/12/20241210-repelente-pet60ml-Deet-15-post-saphirus-red-on-1024x1024.jpg"
+    },
+    {
+        "id": "RS-4",
+        "title": "Repelente extra-duracion en spray x60ml",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "category": "Repelente spray x60ml",
+        "price": 1540,
+        "tags": ["mosquitos", "spray", "repelente"],
+        "brand": "Red On",
+        "photo": "https://academia.saphirus.com.ar/wp-content/uploads/2024/12/20241210-repelente-pet60ml-Deet-25-post-saphirus-red-on-1024x1024.jpg"
+    },
+    {
+        "id": "BS-1",
+        "title": "Body Splash Funny Girl",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "category": "Body Splash",
+        "price": 1540,
+        "tags": ["cuerpo", "perfume", "piel"],
+        "brand": "Milano",
+        "photo": "https://academia.saphirus.com.ar/wp-content/uploads/2023/09/funnygirl-body-splash-1024x1024.jpg"
     }
+    
 ]
