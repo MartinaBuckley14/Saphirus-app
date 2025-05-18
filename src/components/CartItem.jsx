@@ -1,14 +1,25 @@
 import { Pressable, StyleSheet, Text, View } from 'react-native'
 import { colors } from '../global/colors'
 import Ionicons from '@expo/vector-icons/Ionicons';
+import { useDispatch } from 'react-redux';
+import { deleteProduct } from '../features/Cart/cartSlice';
+
 
 const CartItem = ({productCart}) => {
+
+  const dispatch = useDispatch();
+  const subtotal = productCart.price * productCart.quantity;
+
+  const handleDeleteProduct = ()=>{
+    dispatch(deleteProduct(productCart.id))
+  }
+
   return (
     <Pressable style={styles.ItemConteiner}>
-      <Text style={styles.item}>{productCart.title}</Text>
-      <Text style={styles.item}>$ {productCart.price}</Text>
-
-      <Pressable style={styles.item}><Ionicons name="trash-outline" size={23} color={colors.darkerBlue}/></Pressable>
+      <Text style={styles.item} numberOfLines={1} ellipsizeMode='tail'>{productCart.title}</Text>
+      <Text style={styles.item}>$ {subtotal}</Text>
+      <Text style={styles.item}>{productCart.quantity}</Text>
+      <Pressable style={styles.item} onPress={handleDeleteProduct}><Ionicons name="trash-outline" size={23} color={colors.darkerBlue}/></Pressable>
     </Pressable>
   )
 }
@@ -22,9 +33,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     height: 50,
 
-    gap: 10,
+    justifyContent: 'space-around',
     margin: 5,
-    justifyContent: 'space-between',
 
     backgroundColor: colors.backgroundButton,
     borderWidth: 4,
@@ -37,7 +47,8 @@ const styles = StyleSheet.create({
   item: {
     color: colors.darkerBlue,
     alignSelf: 'center',
-    padding: 6
+    padding: 6,
+    maxWidth: 150,
   },
   
 

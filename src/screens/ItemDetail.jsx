@@ -2,10 +2,14 @@ import { Button, Image, Pressable, StyleSheet, Text, View } from 'react-native'
 import { useEffect, useState } from 'react'
 import allProducts from '../data/products.json'
 import { colors } from '../global/colors';
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../features/Cart/cartSlice';
 
 
 const ItemDetail = ({route, navigation}) => {
     const [product, setProduct] = useState("");
+
+    const dispatch = useDispatch()
 
     const {productId: idSelected} = route.params
     
@@ -16,7 +20,10 @@ const ItemDetail = ({route, navigation}) => {
 
     }, [idSelected]);
     
-    
+    const handleAddToCart = () => {
+      dispatch(addToCart(product))
+    }
+
   return (
     <>
       <Pressable style={styles.ItemBack}>
@@ -26,7 +33,7 @@ const ItemDetail = ({route, navigation}) => {
         <Text style={styles.textPrice}>${product.price}</Text>
         <View style={styles.conteinerButton}>
           <Pressable onPress={() => navigation.goBack()} style={styles.button}><Text style={{textAlign: 'center'}}>Back</Text></Pressable>
-          <Pressable onPress={() => navigation.addToCart()} style={styles.button}><Text style={{textAlign: 'center'}}>Add to cart</Text></Pressable>
+          <Pressable onPress={handleAddToCart} style={styles.button}><Text style={{textAlign: 'center'}}>Add to cart</Text></Pressable>
         </View>
         
 

@@ -1,13 +1,16 @@
-import { useState } from 'react'
+
 import { FlatList, Pressable, StyleSheet, Text, View } from 'react-native'
 
 import CartItem from '../components/CartItem'
 import { colors } from '../global/colors'
 import EmptyCart from '../components/EmptyCart'
+import { useSelector } from 'react-redux'
 
-const Cart = ({route, navigation}) => {
-  const cart = []
-  const total = 0
+const Cart = () => {
+  const cart = useSelector(state => state.cart.cartProducts)
+  const total = cart.reduce((suma, item) => suma + item.price*item.quantity, 0)
+
+  
   return (
     <View style={styles.cartView}>
       <FlatList

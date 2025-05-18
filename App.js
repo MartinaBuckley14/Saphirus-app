@@ -1,19 +1,20 @@
 import { StyleSheet, Text, View, Image,ScrollView } from 'react-native';
 
 import { colors } from './src/global/colors';
-import { useState } from 'react';
-import { NavigationContainer } from '@react-navigation/native';
+
 import Navigator from './src/navigation/Navigator';
+import { Provider } from 'react-redux';
+import store from './src/store';
 
 
 
 export default function App() {
-  const [categorySelected, setCategorySelected]= useState("")
-
+  
   return (
-    <Navigator>
-      
-    </Navigator>
+    <Provider store={store} >
+      <Navigator/>
+    </Provider>
+    
   );
 }
 
