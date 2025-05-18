@@ -11,7 +11,7 @@ const Inicio = () => {
     
               
         <View style={{gap: 20, width: "100%", }}>
-          <Image style={styles.fotos} source={require("../../assets/localView.jpeg")}/>
+          <Image style={styles.fotos} source={require("../../assets/ImagenesInicio/localView.jpeg")}/>
           <View>
             <Text style={styles.infotext}>Podes encontrarnos en: "Direccion del local".</Text>
             <Text style={styles.infotext}>Horarios de atencion: de 10 a 18hs</Text>

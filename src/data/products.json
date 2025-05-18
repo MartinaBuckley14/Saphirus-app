@@ -7,7 +7,7 @@
         "price": 4640,
         "tags": ["aerosol", "sandia"],
         "brand": "Saphirus",
-        "photo": {}
+        "photo": "https://academia.saphirus.com.ar/wp-content/uploads/2023/09/aerosol-sandia-pepino-1024x1024.jpg"
     },
     {
         "id": "AE-2",
@@ -17,7 +17,7 @@
         "price": 4640,
         "tags": ["aerosol", "maracuya", "coco", "citrico", "dulce"],
         "brand": "Saphirus",
-        "photo": {}
+        "photo": "https://academia.saphirus.com.ar/wp-content/uploads/2023/09/saphirus-aerosoles-coco-maracuya-1024x1024.jpg"
     },
     {
         "id": "TX-1",
@@ -27,7 +27,7 @@
         "price": 3210,
         "tags": ["textil", "carolina", "good", "perfume"],
         "brand": "Saphirus",
-        "photo": ["../../assets/aceiteView.jpeg"]
+        "photo": "https://academia.saphirus.com.ar/wp-content/uploads/2024/12/20241210-textil-good-woman-saphirus-1024x1024.jpg"
     },
     {
         "id": "TX-2",
@@ -37,7 +37,7 @@
         "price": 3210,
         "tags": ["textil", "petalos", "floral"],
         "brand": "Saphirus",
-        "photo": {}
+        "photo": "https://academia.saphirus.com.ar/wp-content/uploads/2023/09/Petalos-de-Orquideas-ind-1024x1024.jpg"
     },
     {
         "id": "TX-3",
@@ -47,7 +47,7 @@
         "price": 3210,
         "tags": ["textil", "rocio", "suvisante", "vivere"],
         "brand": "Saphirus",
-        "photo": {}
+        "photo": "https://academia.saphirus.com.ar/wp-content/uploads/2023/09/saphirus-textil-rocio-1024x1024.jpg"
     },
     {
         "id": "AA-1",
@@ -57,6 +57,6 @@
         "price": 3520,
         "tags": ["aerosol", "rocio", "suavizante", "ropa"],
         "brand": "Ambar",
-        "photo": {}
+        "photo": "https://academia.saphirus.com.ar/wp-content/uploads/2023/09/rocio-latas-ambar-1024x1024.jpg"
     }
 ]

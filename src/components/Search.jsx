@@ -1,6 +1,8 @@
 import { Button, Pressable, StyleSheet, Text, TextInput, View } from 'react-native'
 import React, { useState } from 'react'
 import { colors } from '../global/colors';
+import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
+import FontAwesome from '@expo/vector-icons/FontAwesome';
 
 const Search = ({error="", onSearch = ()=>{}, goBack =()=>{}}) => {
     const [keyWord, setKeyword]= useState("");
@@ -13,8 +15,8 @@ const Search = ({error="", onSearch = ()=>{}, goBack =()=>{}}) => {
             onChangeText={setKeyword}
         />
         <View style={styles.ConteinerButtons}>
-          <Pressable onPress={()=> onSearch(keyWord)} style={styles.goBack}><Text>Buscar</Text></Pressable>
-          <Pressable onPress={goBack} style={styles.goBack}><Text>Volver a Inicio</Text></Pressable>
+          <Pressable onPress={()=> onSearch(keyWord)} style={styles.goBack}><FontAwesome5 name="search" size={24} color="black" /></Pressable>
+          <Pressable onPress={goBack} style={styles.goBack}><Text>Volver <FontAwesome name="home" size={24} color="black" /></Text></Pressable>
         </View>
         
         

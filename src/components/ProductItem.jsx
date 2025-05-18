@@ -4,9 +4,11 @@ import {StyleSheet, Text, View,Image, Pressable } from 'react-native'
 const ProductItem = ({product,detail}) => {
   
   return (
-    <Pressable style={styles.productContainer} onPress={()=> detail.navigate('ItemDetail', {productId: product.id})}>      
+    <Pressable style={styles.productContainer} onPress={()=> detail.navigate('ItemDetail', {productId: product.id})}>
+            
       <Text style={styles.productTitle}>{product.title}</Text>
-      <Text style={styles.productDescription}>{product.description}</Text>
+      <Text style={styles.productDescription}>{product.category}</Text>
+
     </Pressable>
   )
 }
@@ -40,6 +42,7 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: '#666',
     marginBottom: 8,
+    textAlign: 'center'
   },
   productPrice: {
     fontSize: 16,

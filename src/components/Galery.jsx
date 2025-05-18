@@ -7,11 +7,11 @@ const Galery = () => {
         <>
             <ScrollView horizontal contentContainerStyle={{padding: 10}}>
                 <View style={styles.conteinerpics}>
-                    <Image style={styles.galerypics} source={require("../../assets/prodShiny.jpeg")}/>
-                    <Image style={styles.galerypics} source={require("../../assets/difuColor.jpeg")}/>
-                    <Image style={styles.galerypics} source={require("../../assets/Autoaromas.jpeg")}/>
-                    <Image style={styles.galerypics} source={require("../../assets/colorAero.jpeg")}/>
-                    <Image style={styles.galerypics} source={require("../../assets/route66.jpeg")}/>
+                    <Image style={styles.galerypics} source={require("../../assets/ImagenesInicio/prodShiny.jpeg")}/>
+                    <Image style={styles.galerypics} source={require("../../assets/ImagenesInicio/difuColor.jpeg")}/>
+                    <Image style={styles.galerypics} source={require("../../assets/ImagenesInicio/Autoaromas.jpeg")}/>
+                    <Image style={styles.galerypics} source={require("../../assets/ImagenesInicio/colorAero.jpeg")}/>
+                    <Image style={styles.galerypics} source={require("../../assets/ImagenesInicio/route66.jpeg")}/>
                 </View>
                 
             </ScrollView>

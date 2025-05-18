@@ -3,9 +3,8 @@ import { useEffect, useState } from 'react'
 import products from "../data/products.json"
 import Search from '../components/Search'
 import ProductItem from '../components/ProductItem'
-import Banner from '../components/Banner'
-import Menu from '../components/Menu'
 import { colors } from '../global/colors'
+
 
 const ItemListCategory = ({
   //category="", 
