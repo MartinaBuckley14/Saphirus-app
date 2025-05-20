@@ -1,5 +1,5 @@
-import {StyleSheet, Text, View,Image, Pressable } from 'react-native'
-
+//Componentes
+import {StyleSheet, Text, Pressable } from 'react-native'
 
 const ProductItem = ({product,detail}) => {
   
@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.1,
     shadowRadius: 2,
     elevation: 3, // Para Android
-    width: "80%",
+    width: 300,
   },
   productImage: {
     width: '100%',
@@ -37,6 +37,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold',
     marginVertical: 8,
+    textAlign: 'center'
   },
   productDescription: {
     fontSize: 14,

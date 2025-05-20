@@ -1,10 +1,11 @@
+//Componentes
 import { StyleSheet, View, Image, Text} from "react-native"
 
 const Banner = () => {
     return (
         <View style={styles.banner}>
             <View >
-                <Image style={styles.fotobanner} source={require("../../assets/Iconos/saphirus banner.jpg")} />
+                <Image style={styles.fotobanner} source={require("../../assets/Iconos/saphirus_banner.jpg")} />
                 <Text style={styles.title}>Mercedes City</Text>
             </View>
         </View>

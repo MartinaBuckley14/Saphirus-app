@@ -1,10 +1,13 @@
-import { StyleSheet, Text, View, Image,ScrollView } from 'react-native';
-
-import { colors } from './src/global/colors';
-
-import Navigator from './src/navigation/Navigator';
+//Componentes
+import { StyleSheet} from 'react-native';
 import { Provider } from 'react-redux';
+//Navegacion
+import Navigator from './src/navigation/Navigator';
+//Almacenamiento global
 import store from './src/store';
+//Estilos
+import Toast from 'react-native-toast-message';
+import { colors } from './src/global/colors';
 
 
 
@@ -13,6 +16,7 @@ export default function App() {
   return (
     <Provider store={store} >
       <Navigator/>
+      <Toast/>
     </Provider>
     
   );

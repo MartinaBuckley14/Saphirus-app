@@ -1,28 +1,42 @@
-import { Button, Image, Pressable, StyleSheet, Text, View } from 'react-native'
-import { useEffect, useState } from 'react'
-import allProducts from '../data/products.json'
-import { colors } from '../global/colors';
+//Componentes React
+import { Image, Pressable, StyleSheet, Text, View } from 'react-native'
+//Funciones/Hooks React
 import { useDispatch } from 'react-redux';
+//Reducer/Hooks de Redux Toolkit
 import { addToCart } from '../features/Cart/cartSlice';
+import { useGetProductByIdQuery } from '../Services/Shop';
+//Estilos
+import { colors } from '../global/colors';
+import Toast from 'react-native-toast-message';
+
+
 
 
 const ItemDetail = ({route, navigation}) => {
-    const [product, setProduct] = useState("");
 
-    const dispatch = useDispatch()
+  const dispatch = useDispatch()
 
-    const {productId: idSelected} = route.params
-    
-    
-    useEffect(() => {
-        const productSelected = allProducts.find( (product) => product.id === idSelected);
-        setProduct(productSelected)
+  const {productId: idSelected} = route.params
 
-    }, [idSelected]);
+  const {data: product , error, isLoading} = useGetProductByIdQuery(idSelected)
+  
     
-    const handleAddToCart = () => {
-      dispatch(addToCart(product))
-    }
+  //Funcion manejadora de agregar productos al carrito usando react-redux
+  const handleAddToCart = () => {
+    dispatch(addToCart(product))
+
+    Toast.show({
+      type: 'success',
+      text1: 'Producto agregado!',
+      position: 'top',
+      visibilityTime: 1500
+    })
+  }
+
+  //Manejo de error al cargar el producto
+  if (isLoading) return <Text>Cargando producto...</Text>
+  if (error) return <Text>Error al cargar el producto</Text>
+  if (!product) return <Text>No se encontró el producto</Text>
 
   return (
     <>

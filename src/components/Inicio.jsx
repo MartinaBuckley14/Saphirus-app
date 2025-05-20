@@ -1,6 +1,9 @@
+//Componentes
 import { StyleSheet, Text, View,ScrollView, Image } from 'react-native'
-import { colors } from '../global/colors'
 import Galery from './Galery'
+//Estilos
+import { colors } from '../global/colors'
+
 
 
 const Inicio = () => {

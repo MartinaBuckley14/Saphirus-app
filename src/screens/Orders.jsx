@@ -1,5 +1,5 @@
+//Componentes
 import { FlatList, StyleSheet, Text, View } from 'react-native'
-
 import OrderItem from '../components/OrderItem'
 import EmptyOrders from '../components/EmptyOrders';
 

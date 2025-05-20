@@ -1,8 +1,11 @@
-import React from "react"
+//Componentes
 import { StyleSheet, View, Text, Animated, TouchableOpacity } from "react-native"
-import { useState } from "react";
-import { colors } from "../global/colors";
 import Categories from "./Categories";
+//Funciones/Hooks
+import { useState } from "react";
+//Estilos
+import { colors } from "../global/colors";
+
 
 const Menu = ({pickedCategory}) => {
 

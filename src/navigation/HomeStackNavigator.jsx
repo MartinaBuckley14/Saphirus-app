@@ -1,10 +1,10 @@
-import { StyleSheet, Text, View } from 'react-native'
-
+//Componentes
+import { StyleSheet} from 'react-native'
 import Home from '../screens/Home';
 import ItemListCategory from '../screens/ItemListCategory';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import ItemDetail from '../screens/ItemDetail';
+//Funciones
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 const Stack = createNativeStackNavigator();
 

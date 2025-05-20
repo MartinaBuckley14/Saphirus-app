@@ -1,10 +1,11 @@
-
+//Componentes
 import { FlatList, Pressable, StyleSheet, Text, View } from 'react-native'
-
 import CartItem from '../components/CartItem'
-import { colors } from '../global/colors'
 import EmptyCart from '../components/EmptyCart'
+//Funciones/Hooks
 import { useSelector } from 'react-redux'
+//Estilos
+import { colors } from '../global/colors'
 
 const Cart = () => {
   const cart = useSelector(state => state.cart.cartProducts)

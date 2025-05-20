@@ -1,10 +1,7 @@
-import { StyleSheet, Text } from 'react-native'
-
-import { NavigationContainer } from '@react-navigation/native';
+//Componentes
+import { StyleSheet} from 'react-native'
 import BottomTabNavigator from './BottomTabNavigator';
-
-
-
+import { NavigationContainer } from '@react-navigation/native';
 
 const Navigator = ({navigation}) => {
   return (

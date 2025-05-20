@@ -1,5 +1,8 @@
-import { Button, Pressable, StyleSheet, Text, TextInput, View } from 'react-native'
-import React, { useState } from 'react'
+//Componentes
+import { Pressable, StyleSheet, Text, TextInput, View } from 'react-native'
+//Funciones/Hooks
+import { useState } from 'react'
+//Estilos
 import { colors } from '../global/colors';
 import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
 import FontAwesome from '@expo/vector-icons/FontAwesome';

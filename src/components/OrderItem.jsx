@@ -1,5 +1,6 @@
+//Componentes
 import { StyleSheet, Text, View } from 'react-native'
-
+//Estilos
 import { colors } from '../global/colors'
 
 const OrderItem = ({order}) => {

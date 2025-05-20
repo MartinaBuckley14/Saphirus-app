@@ -1,8 +1,12 @@
-import { Pressable, StyleSheet, Text, View } from 'react-native'
-import { colors } from '../global/colors'
-import Ionicons from '@expo/vector-icons/Ionicons';
+//Componentes
+import { Pressable, StyleSheet, Text} from 'react-native'
+//Funciones
 import { useDispatch } from 'react-redux';
 import { deleteProduct } from '../features/Cart/cartSlice';
+//Estilos
+import { colors } from '../global/colors'
+import Ionicons from '@expo/vector-icons/Ionicons';
+import Toast from 'react-native-toast-message';
 
 
 const CartItem = ({productCart}) => {
@@ -10,8 +14,15 @@ const CartItem = ({productCart}) => {
   const dispatch = useDispatch();
   const subtotal = productCart.price * productCart.quantity;
 
+  //Funcion manejadora de eliminar un producto del carrito con react-redux
   const handleDeleteProduct = ()=>{
     dispatch(deleteProduct(productCart.id))
+    Toast.show({
+      type: 'error',
+      text1: 'Producto eliminado!',
+      position: 'top',
+      visibilityTime: 1500
+    })
   }
 
   return (

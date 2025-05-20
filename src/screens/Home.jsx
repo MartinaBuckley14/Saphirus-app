@@ -1,8 +1,9 @@
-import { StyleSheet, Text, View,ScrollView, Image } from 'react-native'
-import { colors } from '../global/colors'
+//Componentes
+import { StyleSheet, Text, View } from 'react-native'
 import Inicio from '../components/Inicio'
-import Banner from '../components/Banner';
 import Menu from '../components/Menu';
+//Estilos
+import { colors } from '../global/colors'
 
 const Home = ({route, navigation}) => {
   return (

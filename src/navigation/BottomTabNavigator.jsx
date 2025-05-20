@@ -1,11 +1,11 @@
-import { StyleSheet} from 'react-native'
+//Funciones/Hooks
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 //Componentes
 import Orders from '../screens/Orders';
 import Cart from '../screens/Cart';
 import HomeStackNavigator from './HomeStackNavigator';
 import Banner from '../components/Banner';
-//Iconos
+//Estilos
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
