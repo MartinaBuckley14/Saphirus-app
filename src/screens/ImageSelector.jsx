@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { usePostImageProfileMutation } from '../Services/Shop'
 import { useDispatch, useSelector } from 'react-redux'
 import * as ImagePicker from 'expo-image-picker'
+import { setCameraImage } from '../features/User/userSlice'
 
 
 const ImageSelector = ({navigation}) => {
@@ -67,10 +68,14 @@ const ImageSelector = ({navigation}) => {
     }
 
     const saveChanges = () => {
-        if(image) {
+        try {
+            dispatch(setCameraImage(image))
             triggerPostImage({image, localId})
-        }
+            navigation.goBack()
+        }catch(fail){}
+        
     }
+    
     //Muestra un alert con opciones
     const openOptions = () => {
         Alert.alert('Seleccionar imagen', '¿Qué deseas hacer?', [

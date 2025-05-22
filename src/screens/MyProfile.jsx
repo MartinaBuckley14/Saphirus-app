@@ -20,7 +20,11 @@ const MyProfile = ({navigation}) => {
         (<Image source={require(defaultImage)} style={styles.userImage} resizeMode='cover'/>)}
       
       <Pressable style={styles.buttonAddImage} onPress={addPicture}>
-        <Text style={styles.textPicture}>Agregar foto de perfil</Text>
+        {imageFromBase || imageCamera ? 
+        (<Text style={styles.textPicture}>Editar foto de perfil</Text>) 
+        : 
+        (<Text style={styles.textPicture}>Agregar foto de perfil</Text>) 
+        }  
       </Pressable>
     </View>
   )
