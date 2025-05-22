@@ -10,8 +10,11 @@ import { setUser } from '../features/User/userSlice'
 const SignUpScreen = ({navigation}) => {
 
   const [email, setEmail] = useState("")
+  const [errormail, setErrorMail] = useState("")
   const [password, setPassword] = useState("")
+  const [errorPassword, setErrorPassword] = useState("")
   const [confirmPassword, setConfirmPassword] = useState("")
+  const [errorConfirmPassword, setErrorConfirmPassword] = useState("")
 
   const dispatch = useDispatch()
   const [triggerSignup, result] = useSignUpMutation()
@@ -30,12 +33,32 @@ const SignUpScreen = ({navigation}) => {
   },[result])
 
   const onSubmit = () => {
+    try {
+      setErrorMail("")
+      setErrorPassword("")
+      setErrorConfirmPassword("")
+
+      signUpSchema.validateSync({email, password, confirmPassword})
+
+      triggerSignup({
+        email,
+        password,
+        returnSecureToken: true
+      })
+    }catch(fail){
+      switch (fail.path) {
+        case "email": 
+          setErrorMail(fail.message)
+          break
+        case "password":
+          setErrorPassword(fail.message)
+          break
+        case "confirmPassword":
+          setErrorConfirmPassword(fail.message)
+          break
+      }
+    }
     
-    triggerSignup({
-      email,
-      password,
-      returnSecureToken: true
-    })
   }
     
   return (
@@ -45,19 +68,19 @@ const SignUpScreen = ({navigation}) => {
         <InputForm 
           label={"Email"} 
           onChange={setEmail} 
-          error={''}
+          error={errormail}
         />
         <InputForm 
           label={"Password"}
           placeholder={'Ingrese una contraseña'} 
           onChange={setPassword} 
-          error={''} 
+          error={errorPassword} 
           isSecure={true}
         />
         <InputForm 
           label={"Confirm password"} 
           onChange={setConfirmPassword} 
-          error={''} 
+          error={errorConfirmPassword} 
           isSecure={true}
         />
         <SubmitButton

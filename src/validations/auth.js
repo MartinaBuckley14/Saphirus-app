@@ -3,6 +3,6 @@ export const isValidEmail = (email) => {
     return regex.test(emailInput)
 }
 export const isValidPassword = (input) => {
-    const regex = /.{4,}/
+    const regex = /.{6,}/
     return regex.test(input)
 }
