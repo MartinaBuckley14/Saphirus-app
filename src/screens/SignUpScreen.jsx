@@ -6,6 +6,7 @@ import SubmitButton from '../components/SubmitButton'
 import { useDispatch } from 'react-redux'
 import { signUpSchema } from '../validations/authSchema'
 import { setUser } from '../features/User/userSlice'
+import Toast from 'react-native-toast-message'
 
 const SignUpScreen = ({navigation}) => {
 
@@ -23,11 +24,28 @@ const SignUpScreen = ({navigation}) => {
     if(result.isSuccess){
       dispatch(
         setUser({
-          email: result.data.email,
-          idToken: result.data.idToken
+          user: result.data.email,
+          token: result.data.idToken,
+          localId: result.data.localId
+        })
+      )
+      //Limpiar campos del formulario
+      setEmail("")
+      setPassword("")
+      setConfirmPassword("")
+
+      //Aviso de registro exitoso
+      Toast.show({
+        type: 'success',
+        text1: 'Usuario creado con éxito!',
+        position: 'bottom',
+        visibilityTime: 4000
       })
-    )
   
+      //Redirigir al usuario para que inicie sesion una vez registrado
+      setTimeout(()=> {
+        navigation.navigate('Login')
+      },1500)
     }
     
   },[result])
@@ -45,6 +63,7 @@ const SignUpScreen = ({navigation}) => {
         password,
         returnSecureToken: true
       })
+
     }catch(fail){
       switch (fail.path) {
         case "email": 
@@ -58,6 +77,7 @@ const SignUpScreen = ({navigation}) => {
           break
       }
     }
+
     
   }
     
@@ -66,12 +86,14 @@ const SignUpScreen = ({navigation}) => {
       <View style={styles.conteinerForm}>
         <Text style={styles.title}>Registrate!</Text>
         <InputForm 
-          label={"Email"} 
+          label={"Email"}
+          value={email}  
           onChange={setEmail} 
           error={errormail}
         />
         <InputForm 
           label={"Password"}
+          value={password} 
           placeholder={'Ingrese una contraseña'} 
           onChange={setPassword} 
           error={errorPassword} 
@@ -79,6 +101,7 @@ const SignUpScreen = ({navigation}) => {
         />
         <InputForm 
           label={"Confirm password"} 
+          value={confirmPassword} 
           onChange={setConfirmPassword} 
           error={errorConfirmPassword} 
           isSecure={true}

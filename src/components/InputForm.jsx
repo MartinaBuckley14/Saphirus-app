@@ -3,21 +3,16 @@ import { useState } from 'react'
 import { colors } from '../global/colors'
 
 const InputForm = ({
-    label, onChange, error = "", isSecure = false
+    label, onChange, error = "", isSecure = false, value
 }) => {
-    const [input, setInput] = useState("")
-    const onChangeText = (text) => {
-      setInput(text)
-      onChange(text)
-    }
 
   return (
     <View style={styles.Conteiner}>
       <Text style={styles.title}>{label}</Text>
       <TextInput 
         style={[styles.input, error ? styles.inputError : {}]} 
-        value={input} 
-        onChangeText={onChangeText} 
+        value={value} 
+        onChangeText={onChange} 
         secureTextEntry={isSecure}
       />
       {error ? <Text style={styles.textError}>{error}</Text> : null}

@@ -13,7 +13,6 @@ const ImageSelector = ({navigation}) => {
     const {localId} = useSelector(state => state.auth.value)
     const dispatch = useDispatch()
     
-
     const verifyCameraPermissions = async (type = 'camera') => {
         if(type === 'camera') {
             const {granted} = await ImagePicker.requestCameraPermissionsAsync()
@@ -29,6 +28,7 @@ const ImageSelector = ({navigation}) => {
         try {
             const permissionCamera = await verifyCameraPermissions('camera')
             if(!permissionCamera) return
+             
 
             const result = await ImagePicker.launchCameraAsync({
                 mediaType: ImagePicker.MediaTypeOptions.Images,
@@ -38,7 +38,7 @@ const ImageSelector = ({navigation}) => {
                 quality: 0.2
             })
             if(!result.canceled){
-               const image = `data:image/jpg;base64, ${result.assets[0].base64}` 
+               const image = `data:image/jpg;base64,${result.assets[0].base64}` 
                setImage(image)
             }
             
@@ -58,7 +58,7 @@ const ImageSelector = ({navigation}) => {
                 quality: 0.2
             })
             if(!result.canceled){
-               const image = `data:image/jpg;base64, ${result.assets[0].base64}` 
+               const image = `data:image/jpg;base64,${result.assets[0].base64}` 
                setImage(image)
             }
             
@@ -70,7 +70,9 @@ const ImageSelector = ({navigation}) => {
     const saveChanges = () => {
         try {
             dispatch(setCameraImage(image))
+            
             triggerPostImage({image, localId})
+            console.log('localId:', localId);
             navigation.goBack()
         }catch(fail){}
         
