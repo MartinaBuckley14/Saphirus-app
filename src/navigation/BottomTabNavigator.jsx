@@ -11,6 +11,7 @@ import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import { colors } from '../global/colors';
 import MyProfileStackNavigator from './MyProfileStackNavigator';
+import OrderStackNavigator from './OrderStackNavigator';
 
 
 const Tab = createBottomTabNavigator();
@@ -33,7 +34,7 @@ const BottomTabNavigator = () => {
                 <MaterialCommunityIcons name="cart-variant" size={24} color={focused ? colors.darkBlue : colors.creamDark} />
             )
         })}/>
-        <Tab.Screen name='Orders' component={Orders} options={()=>({
+        <Tab.Screen name='Orders' component={OrderStackNavigator} options={()=>({
             tabBarIcon: ({focused})=>(
                 <MaterialIcons name="assignment" size={24} color={focused ? colors.darkBlue : colors.creamDark} />
             )

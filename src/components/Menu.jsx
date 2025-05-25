@@ -14,19 +14,12 @@ const Menu = ({pickedCategory}) => {
     const [dropDownAnim] = useState(new Animated.Value(0));
     
     const foldingMenu = () => {
-        if(drop) {
-            Animated.timing(dropDownAnim, {
-                toValue: 0,
-                duration: 300,
-                useNativeDriver: true,
-            }).start();
-        }else {
-            Animated.timing(dropDownAnim, {
-                toValue: 1,
-                duration: 300,
-                useNativeDriver: true,
-            }).start();
-        }
+        Animated.timing(dropDownAnim, {
+            toValue: drop ? 0 : 1,
+            duration: 300,
+            useNativeDriver: false,
+        }).start();
+        
     
         setDrop(!drop);
     }
@@ -115,34 +108,3 @@ const styles = StyleSheet.create({
 
 })
 
-//VISUAL ESPERADA DEL MENU DE CATEGORIAS
-{/*<TouchableOpacity style={styles.containernavbar}>
-                        <View style={styles.conteinerLineas}>
-                            <Image style={styles.button} source={require("../../assets/logoSaphirus.jpeg")}/>
-                            <Text style={styles.textMenu}>Línea Saphirus</Text>
-                        </View>
-                    </TouchableOpacity>
-                    <TouchableOpacity style={styles.containernavbar}>
-                        <View style={styles.conteinerLineas}>
-                            <Image style={styles.button} source={require("../../assets/logoAmbar.jpeg")}/>
-                            <Text style={styles.textMenu}>Línea Ambar</Text>
-                        </View>
-                    </TouchableOpacity>
-                    <TouchableOpacity style={styles.containernavbar}>
-                        <View style={styles.conteinerLineas}>
-                            <Image style={styles.button} source={require("../../assets/logoMilano.jpeg")}/>
-                            <Text style={styles.textMenu}>Línea Milano</Text>
-                        </View>
-                    </TouchableOpacity>
-                    <TouchableOpacity style={styles.containernavbar}>
-                        <View style={styles.conteinerLineas}>
-                            <Image style={styles.button} source={require("../../assets/logoShiny.jpeg")}/>
-                            <Text style={styles.textMenu}>Línea Shiny</Text>
-                        </View>
-                    </TouchableOpacity>
-                    <TouchableOpacity style={styles.containernavbar}>
-                        <View style={styles.conteinerLineas}>
-                            <Image style={styles.button} source={require("../../assets/logoRedOn.png")}/>
-                            <Text style={styles.textMenu}>Línea Red On</Text>
-                        </View>    
-                    </TouchableOpacity>*/}

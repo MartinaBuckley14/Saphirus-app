@@ -40,7 +40,7 @@ const MyProfile = ({navigation}) => {
         (<Text style={styles.textButton}>Agregar foto de perfil</Text>) 
         }  
       </Pressable>
-      <Pressable style={styles.buttonLogOut} onPress={logOut}><Text style={styles.textButton}>LogOut</Text></Pressable>
+      <Pressable style={styles.buttonLogOut} onPress={logOut}><Text style={styles.textButton}>Cerrar Sesion</Text></Pressable>
     </View>
   )
 }
