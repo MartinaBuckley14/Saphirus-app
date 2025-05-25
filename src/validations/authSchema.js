@@ -13,3 +13,12 @@ export const signUpSchema = object().shape({
     .oneOf([ref("password"), null], 'Debe ingresar la misma contraseña')
     .required('Confirme su contraseña para continuar')
 })
+
+export const signInSchema = object().shape({
+    email: string()
+    .required('Ingrese su email')
+    .email('Ingrese un email válido'),
+    password: string()
+    .required('Ingrese su contraseña')
+    .min(6, 'La contraseña debe tener mínimo 6 caracteres')
+})

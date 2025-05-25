@@ -1,22 +1,39 @@
-import { configureStore } from "@reduxjs/toolkit";
+import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import cartReducer from "../features/Cart/cartSlice"
 import authReducer from "../features/User/userSlice"
 import { shopApi } from "../Services/Shop";
 import { setupListeners } from "@reduxjs/toolkit/query";
 import { authApi } from "../Services/AuthApi";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import persistReducer from "redux-persist/es/persistReducer";
+import persistStore from "redux-persist/es/persistStore";
 
+const persistConfig = {
+    key: 'root',
+    storage: AsyncStorage,
+    whitelist: ['cart','auth']
+}
 
-const store = configureStore({
-    reducer: {
-        cart: cartReducer,
-        auth: authReducer,
-        [shopApi.reducerPath] : shopApi.reducer,
-        [authApi.reducerPath] : authApi.reducer
-        
-    },
-    middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(shopApi.middleware).concat(authApi.middleware)
+const rootReducer = combineReducers({
+    cart: cartReducer,
+    auth: authReducer,
+    [shopApi.reducerPath] : shopApi.reducer,
+    [authApi.reducerPath] : authApi.reducer
 })
 
-setupListeners(store.dispatch);
+const persistedReducer = persistReducer(persistConfig, rootReducer)
 
-export default store;
+export const store = configureStore({
+    reducer: persistedReducer,
+    middleware: (getDefaultMiddleware) => getDefaultMiddleware({
+        serializableCheck: {
+            ignoreActions: ['persist/PERSIST', 'persist/REHYDRATE', 'persist/PAUSE', 'persist/FLUSH', 'persist/PURGE', 'persist/REGISTER']
+        }
+    })
+    .concat(shopApi.middleware)
+    .concat(authApi.middleware)
+})
+
+export const persistor = persistStore(store)
+
+setupListeners(store.dispatch);

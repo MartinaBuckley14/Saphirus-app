@@ -4,10 +4,12 @@ import { Provider } from 'react-redux';
 //Navegacion
 import Navigator from './src/navigation/Navigator';
 //Almacenamiento global
-import store from './src/store';
+import {store, persistor } from './src/store';
 //Estilos
 import Toast from 'react-native-toast-message';
 import { colors } from './src/global/colors';
+import { useEffect } from 'react';
+import { PersistGate } from 'redux-persist/integration/react';
 
 
 
@@ -15,8 +17,10 @@ export default function App() {
   
   return (
     <Provider store={store} >
-      <Navigator/>
-      <Toast/>
+      <PersistGate loading={null} persistor={persistor}>
+        <Navigator/>
+        <Toast/>    
+      </PersistGate>
     </Provider>
     
   );

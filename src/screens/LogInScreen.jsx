@@ -5,6 +5,8 @@ import SubmitButton from '../components/SubmitButton'
 import { useSignInMutation} from '../Services/AuthApi'
 import { useDispatch } from 'react-redux'
 import { setUser } from '../features/User/userSlice'
+import { signInSchema, signUpSchema } from '../validations/authSchema'
+import Toast from 'react-native-toast-message'
 
 const LogInScreen = ({navigation}) => {
   const dispatch = useDispatch()
@@ -15,25 +17,77 @@ const LogInScreen = ({navigation}) => {
   const [password, setPassword] = useState()
 
   useEffect(()=> {
+    if(result.isError) {
+      const errorCode = result.error?.data?.error?.message
+
+      let toastMessage = ''
+
+      switch (errorCode) {
+        case 'EMAIL_NOT_FOUND':
+        case 'INVALID_PASSWORD':
+        case 'INVALID_LOGIN_CREDENTIALS':
+          toastMessage = 'Email o contraseña incorrectos'
+          break
+        case 'INVALID_EMAIL':
+          toastMessage = 'Formato de email inválido';
+          break;
+        case 'USER_DISABLED':
+          toastMessage = 'Esta cuenta ha sido deshabilitada';
+          break;
+        case 'TOO_MANY_ATTEMPTS_TRY_LATER':
+          toastMessage = 'Demasiados intentos, intenta más tarde';
+          break;
+        default:
+          toastMessage = 'Ocurrió un error al iniciar sesión'
+      }
+
+      Toast.show({
+        type: 'error',
+        text1: toastMessage,
+        position: 'top',
+        visibilityTime: 4000
+      })
+    }
+
+    //para ejecutar en caso de que no se detecte error
     if(result.isSuccess){
       dispatch(
         setUser({
           user: result.data.email,
           idToken: result.data.idToken,
-          localId: result.data.localId
+          localId: result.data.localId,
         })
       )
     }
+    
   },[result])
 
   //Funcion para manejar formulario
-  const onSubmit = () => {
+  const onSubmit = async () => {
+    if(!email || !password) {
+      Toast.show({
+        type: 'error',
+        text1: 'Completar ambos campos',
+        position: 'top',
+        visibilityTime: 4000
+      })
+      return
+    }
 
-   if(!email || !password) {
-    alert('Completar ambos campos')
-    return
-   } 
-    triggerSignIn({email, password,})
+    try{
+      await signInSchema.validate({email,password})
+      triggerSignIn({email, password})
+    }catch(fail){
+      //manejo de errores
+      switch (fail.path) {
+        case "email": 
+          setErrorMail(fail.message)
+          break
+        case "password":
+          setErrorPassword(fail.message)
+          break
+      }
+    }
   }
       
 

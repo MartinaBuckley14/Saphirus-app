@@ -9,9 +9,12 @@ const MyProfile = ({navigation}) => {
 
     const defaultImage = "../../assets/Iconos/defaultImage.jpg"
     const addPicture = () => {
-        navigation.navigate('Image Selector')
+      navigation.navigate('Image Selector')
     }
 
+    const logOut = () => {}
+
+    
   return (
     <View style={styles.conteiner}>
         {imageFromBase || imageCamera ? 
@@ -21,11 +24,12 @@ const MyProfile = ({navigation}) => {
       
       <Pressable style={styles.buttonAddImage} onPress={addPicture}>
         {imageFromBase || imageCamera ? 
-        (<Text style={styles.textPicture}>Editar foto de perfil</Text>) 
+        (<Text style={styles.textButton}>Editar foto de perfil</Text>) 
         : 
-        (<Text style={styles.textPicture}>Agregar foto de perfil</Text>) 
+        (<Text style={styles.textButton}>Agregar foto de perfil</Text>) 
         }  
       </Pressable>
+      <Pressable style={styles.buttonLogOut} onPress={logOut}><Text style={styles.textButton}>LogOut</Text></Pressable>
     </View>
   )
 }
@@ -43,22 +47,30 @@ const styles = StyleSheet.create({
       justifyContent: 'flex-start'  
     },
     userImage: {
-        width: '40%',
-        height: '25%',
-        borderRadius: 90,
-        borderWidth: 2,
-        borderColor: colors.bannerBlue 
+      width: '40%',
+      height: '25%',
+      borderRadius: 90,
+      borderWidth: 2,
+      borderColor: colors.bannerBlue 
     },
     buttonAddImage: {
-        backgroundColor: colors.backgroundButton,
-        borderWidth: 1.5,
-        borderColor: colors.bannerBlue,
-        borderRadius: 3,
+      backgroundColor: colors.backgroundButton,
+      borderWidth: 1.5,
+      borderColor: colors.bannerBlue,
+      borderRadius: 3,
 
-        padding: 5,
+      padding: 5,
 
     },
-    textPicture: {
-        fontSize: 12
+    buttonLogOut: {
+      backgroundColor: colors.backgroundButton,
+      borderWidth: 1.5,
+      borderColor: colors.bannerBlue,
+      borderRadius: 3,
+
+      padding: 5,
+    },
+    textButton: {
+      fontSize: 12
     }
 })
