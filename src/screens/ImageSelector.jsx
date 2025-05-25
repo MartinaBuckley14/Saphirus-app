@@ -72,7 +72,7 @@ const ImageSelector = ({navigation}) => {
             dispatch(setCameraImage(image))
             
             triggerPostImage({image, localId})
-            console.log('localId:', localId);
+            
             navigation.goBack()
         }catch(fail){}
         
