@@ -1,18 +1,26 @@
 import { Image, Pressable, StyleSheet, Text, View } from 'react-native'
 import { colors } from '../global/colors'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { useGetProfileImageQuery } from '../Services/Shop'
+import { clearUser } from '../features/User/userSlice'
+import { useNavigation } from '@react-navigation/native'
+import AsyncStorage from '@react-native-async-storage/async-storage'
 
 const MyProfile = ({navigation}) => {
     const {imageCamera, localId} = useSelector(state => state.auth.value)
     const {data: imageFromBase} = useGetProfileImageQuery(localId)
+    const dispatch = useDispatch()
 
     const defaultImage = "../../assets/Iconos/defaultImage.jpg"
+    
     const addPicture = () => {
       navigation.navigate('Image Selector')
     }
 
-    const logOut = () => {}
+    const logOut = () => {
+      dispatch(clearUser())
+      AsyncStorage.removeItem('authToken')
+    }
 
     
   return (
