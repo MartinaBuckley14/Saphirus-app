@@ -4,13 +4,23 @@ import CartItem from '../components/CartItem'
 import EmptyCart from '../components/EmptyCart'
 //Funciones/Hooks
 import { useSelector } from 'react-redux'
+import {usePostOrderMutation} from '../Services/Shop'
 //Estilos
 import { colors } from '../global/colors'
 
 const Cart = () => {
-  const cart = useSelector(state => state.cart.cartProducts)
+  const cart = useSelector(state => state.cart.cartProducts ?? [])
+  const {localId} = useSelector(state => state.auth.value)
   const total = cart.reduce((suma, item) => suma + item.price*item.quantity, 0)
+  const [triggerPostOrder, result] = usePostOrderMutation()
 
+
+  const confirmOrder = () => {
+    triggerPostOrder({items: cart, user: localId, total})
+
+    //Limpiar carrito
+    
+  }
   
   return (
     <View style={styles.cartView}>
@@ -21,7 +31,7 @@ const Cart = () => {
         ListEmptyComponent={<EmptyCart/>}
       />
       <View>
-        <Pressable>
+        <Pressable onPress={confirmOrder}>
           <Text>Checkout</Text>
         </Pressable>
         <Text>Total: ${total}</Text>

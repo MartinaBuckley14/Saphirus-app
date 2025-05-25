@@ -1,6 +1,7 @@
 //Componentes
 import { StyleSheet} from 'react-native';
 import { Provider } from 'react-redux';
+import { PersistGate } from 'redux-persist/integration/react';
 //Navegacion
 import Navigator from './src/navigation/Navigator';
 //Almacenamiento global
@@ -8,13 +9,12 @@ import {store, persistor } from './src/store';
 //Estilos
 import Toast from 'react-native-toast-message';
 import { colors } from './src/global/colors';
-import { useEffect } from 'react';
-import { PersistGate } from 'redux-persist/integration/react';
+
 
 
 
 export default function App() {
-  
+ 
   return (
     <Provider store={store} >
       <PersistGate loading={null} persistor={persistor}>

@@ -5,6 +5,7 @@ import { useGetProfileImageQuery } from '../Services/Shop'
 import { clearUser } from '../features/User/userSlice'
 import { useNavigation } from '@react-navigation/native'
 import AsyncStorage from '@react-native-async-storage/async-storage'
+import { clearCart } from '../features/Cart/cartSlice'
 
 const MyProfile = ({navigation}) => {
     const {imageCamera, localId} = useSelector(state => state.auth.value)
@@ -19,7 +20,9 @@ const MyProfile = ({navigation}) => {
 
     const logOut = () => {
       dispatch(clearUser())
-      AsyncStorage.removeItem('authToken')
+      dispatch(clearCart())
+      AsyncStorage.multiRemove('authToken','cart')
+      
     }
 
     

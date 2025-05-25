@@ -1,13 +1,15 @@
 //Componentes
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, Pressable } from 'react-native'
 //Estilos
 import { colors } from '../global/colors'
 
 const OrderItem = ({order}) => {
+
+  
   return (
     <Pressable style={styles.ItemConteiner}>
         <Text style={styles.item}>{new Date(order.createdAt).toLocaleString()}</Text>
-        <Text style={styles.item}>$ {order.total}</Text>
+        <Text style={styles.item}>${order.total}</Text>
     </Pressable>
   )
 }
