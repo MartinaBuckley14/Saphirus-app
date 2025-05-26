@@ -28,19 +28,21 @@ const MyProfile = ({navigation}) => {
     
   return (
     <View style={styles.conteiner}>
-        {imageFromBase || imageCamera ? 
-        (<Image source={{uri: imageFromBase?.image|| imageCamera}} style={styles.userImage} resizeMode='cover'/>) 
-        : 
-        (<Image source={require(defaultImage)} style={styles.userImage} resizeMode='cover'/>)}
-      
-      <Pressable style={styles.buttonAddImage} onPress={addPicture}>
-        {imageFromBase || imageCamera ? 
-        (<Text style={styles.textButton}>Editar foto de perfil</Text>) 
-        : 
-        (<Text style={styles.textButton}>Agregar foto de perfil</Text>) 
-        }  
-      </Pressable>
-      <Pressable style={styles.buttonLogOut} onPress={logOut}><Text style={styles.textButton}>Cerrar Sesion</Text></Pressable>
+      <View style={styles.conteinerProfileCard}>
+          {imageFromBase || imageCamera ? 
+          (<Image source={{uri: imageFromBase?.image|| imageCamera}} style={styles.userImage} resizeMode='cover'/>) 
+          : 
+          (<Image source={require(defaultImage)} style={styles.userImage} resizeMode='cover'/>)}
+        
+        <Pressable style={styles.buttonAddImage} onPress={addPicture}>
+          {imageFromBase || imageCamera ? 
+          (<Text style={styles.textButton}>Editar foto de perfil</Text>) 
+          : 
+          (<Text style={styles.textButton}>Agregar foto de perfil</Text>) 
+          }  
+        </Pressable>
+        <Pressable style={styles.buttonLogOut} onPress={logOut}><Text style={styles.textButtonLogOut}>Cerrar Sesion</Text></Pressable>
+      </View>
     </View>
   )
 }
@@ -51,17 +53,27 @@ const styles = StyleSheet.create({
     conteiner: {
       flex: 1,
       gap: 15,
-      padding: 10,
-      marginTop: 20,
+
+      backgroundColor: colors.cream,
       
       alignItems: 'center',
-      justifyContent: 'flex-start'  
+      justifyContent: 'flex-start',
+    },
+    conteinerProfileCard: {
+      borderRadius: 10,
+      marginTop: 30,
+      padding: 20,
+      width: '90%',
+      alignItems: 'center',
+
+      backgroundColor: colors.creamDark,
     },
     userImage: {
-      width: '40%',
-      height: '25%',
-      borderRadius: 90,
+      width: 150,
+      height: 150,
+      borderRadius: 80,
       borderWidth: 2,
+      marginBottom: 20,
       borderColor: colors.bannerBlue 
     },
     buttonAddImage: {
@@ -69,19 +81,32 @@ const styles = StyleSheet.create({
       borderWidth: 1.5,
       borderColor: colors.bannerBlue,
       borderRadius: 3,
+      width: '80%',
+      paddingVertical: 12,
+      marginVertical: 5,
+      alignItems: 'center',
 
       padding: 5,
 
     },
     buttonLogOut: {
-      backgroundColor: colors.backgroundButton,
+      backgroundColor: colors.backgroundMenuButton,
       borderWidth: 1.5,
       borderColor: colors.bannerBlue,
       borderRadius: 3,
+      width: '80%',
+      paddingVertical: 12,
+      marginVertical: 5,
+      alignItems: 'center',
 
       padding: 5,
     },
     textButton: {
       fontSize: 12
+    },
+    textButtonLogOut: {
+      fontSize: 12,
+      color: 'white',
+
     }
 })
